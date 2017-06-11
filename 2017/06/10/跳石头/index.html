@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>跳石头 | wspl09876</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="齐河一中蒟蒻一只">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="跳石头 | wspl09876">
+    <meta name="twitter:description" content="齐河一中蒟蒻一只">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="跳石头 | wspl09876">
+    <meta property="og:description" content="齐河一中蒟蒻一只">
+
+    
+    <meta name="author" content="wspl09876">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="wspl09876" href="/atom.xml">
+    
+
+    <link rel="canonical" href="https://hychychyc.github.io/2017/06/10/跳石头/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 wspl09876 的主页"><img src="/images/hhh.jpg" width="80" alt="wspl09876 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for wspl09876">wspl09876</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">hyc</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">齐河一中蒟蒻一只</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/">黄金屋</a></li>
+            
+              <li class="navigation__item"><a href="/">时光机</a></li>
+            
+              <li class="navigation__item"><a href="/about">关于我</a></li>
+            
+              <li class="navigation__item"><a href="/tags">友链</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/hychychyc" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-disabled"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-06-10T07:23:37.000Z" class="post-list__meta--date date">2017-06-10</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/二分答案-贪心/">二分答案 贪心</a>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">跳石头</h1>
+  </header>
+
+  <section class="post">
+    <p>二分答案加贪心<br>和之前一个丢瓶盖一样，对去几个石子二分，去多了就取大了，去少了就取小了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#define ll long long</span><br><span class="line">using namespace std;</span><br><span class="line">ll a[99999],n,m,l,dp[51999],f,d[99999];</span><br><span class="line">int check(int x)&#123;</span><br><span class="line">    int ans=0;</span><br><span class="line">    int t=d[1];</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        if(t&gt;=x)&#123;</span><br><span class="line">            t=d[i+1];</span><br><span class="line">        &#125;</span><br><span class="line">        else </span><br><span class="line">        &#123;</span><br><span class="line">        ans++;    </span><br><span class="line">        t+=d[i+1];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    scanf(&quot;%lld%lld%lld&quot;,&amp;l,&amp;n,&amp;m);</span><br><span class="line">    if(m==n||m==0)&#123;</span><br><span class="line">        printf(&quot;%lld&quot;,l);</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    a[0]=1;</span><br><span class="line">    a[n+1]=l;</span><br><span class="line">    for(ll i=1;i&lt;=n+1;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        scanf(&quot;%lld&quot;,&amp;a[i]);</span><br><span class="line">        d[i]=a[i]-a[i-1];</span><br><span class="line">    &#125;</span><br><span class="line">    /*memset(dp,127,sizeof(dp));</span><br><span class="line">    </span><br><span class="line">    for(ll i=1;i&lt;=n+1;i++)</span><br><span class="line">        for(ll j=1;j&lt;=m;j++)</span><br><span class="line">        for(ll k=1;k&lt;=j;k++)</span><br><span class="line">        &#123;</span><br><span class="line">            ll q=min(dp[j],a[i]-a[i-k]);</span><br><span class="line">            ll w=min(dp[j-k],a[i+1]-a[i-k]);</span><br><span class="line">            dp[j]=max(q,w);</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    printf(&quot;%lld&quot;,dp[m]);*/</span><br><span class="line">    int r=l,le=1;</span><br><span class="line">    while(le&lt;=r)&#123;</span><br><span class="line">        int mid=(le+r)&gt;&gt;1;</span><br><span class="line">        int w=check(mid);</span><br><span class="line">        //printf(&quot;%d &quot;,w);</span><br><span class="line">        if(w&gt;m)</span><br><span class="line">        r=mid-1;</span><br><span class="line">        else  le=mid+1;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%d&quot;,r);    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">最近的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/06/11/斗地主/" title="斗地主">斗地主</a></h2>
+                <p class="excerpt">
+                
+                2015最后一题，这道题是大爆搜+贪心，先枚举四带一，三带一，单牌，etc，再枚举顺子优化解，在搜索优化的解是不是优化的（不一定是最优的，所以要递归），在递归回去，找别的顺子优化。123456789101112131415161718192021222324252627282930313233343
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-06-11T01:38:43.000Z" class="post-list__meta--date date">2017-06-11</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/大爆搜-贪心/">大爆搜+贪心</a>
+</span><a class="btn-border-small" href="/2017/06/11/斗地主/">继续阅读</a></div>
+                           
+            </div>
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/06/09/usaco水题/" title="usaco水题">usaco水题</a></h2>
+                <p class="excerpt">
+                
+                黑色星期五纯模拟都能过1234567891011121314151617181920212223242526272829303132333435363738#include&amp;lt;cstdio&amp;gt;using namespace std;int a[12]=&amp;#123;31,29,31,30,31
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-06-09T00:43:33.000Z" class="post-list__meta--date date">2017-06-09</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/水题/">水题</a>
+</span><a class="btn-border-small" href="/2017/06/09/usaco水题/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "96c7315d934b43bfaa12ffd064d52d5e",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2017 - 本站使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题,
+        由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+    </span>
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-78918255-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9cdad07c755fa23f6aced510c6760e87";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+</body>
+</html>
