@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>wspl09876 | hyc</title>
+    <title>子串 | wspl09876</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="齐河一中蒟蒻一只">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="wspl09876 | hyc">
+    <meta name="twitter:title" content="子串 | wspl09876">
     <meta name="twitter:description" content="齐河一中蒟蒻一只">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="wspl09876 | hyc">
+    <meta property="og:title" content="子串 | wspl09876">
     <meta property="og:description" content="齐河一中蒟蒻一只">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="wspl09876" href="/atom.xml">
     
 
-    <link rel="canonical" href="https://hychychyc.github.io"/>
+    <link rel="canonical" href="https://hychychyc.github.io/2017/06/11/子串/"/>
 
                  
 </head>
@@ -137,84 +137,65 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/统计单词个数/" title="link to post.title">统计单词个数</a></h2>
-      <p class="excerpt">
-    
-      这个题和之前一个乘法最大思路差不多，就是如果要划分k份之前已经划分了k-1份，划分为k份的就是由，k-1推来的再加上第k份的单词个数，所以就枚举前面k-1分到的位置，是k~当前位置，取最大值，就是结果了然后单词个数就在线统计就行了，因为以一个数为首字母的只能用一次，所以找最短的单词记下来就行了。1234567891011121314151617181920212223242526272829303
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T06:27:41.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-06-11T09:44:45.000Z" class="post-list__meta--date date">2017-06-11</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
   <a class="tag-link" href="/tags/dp/">dp</a>
-</span><a class="btn-border-small" href="/2017/06/07/统计单词个数/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">子串</h1>
+  </header>
+
+  <section class="post">
+    <p>这个题我搞了好久，终于算是明白了点吧<br>看了很多大神的博客，总结出来了一些做法，不知对不对，就写一些吧。<br>先定义两个数组<br>sum[i][j][k]就是a串前i个字母,b串前j个字母的方案总数！！！！，就是结果<br>f[i][j][k]是用第i个字母用的方案数。<br>当匹配时：<br>因为第i个可以和前i-1合并为一块(但这是方案数不变,因为组数相同，为f[i-1][j-1][k]),也可以不合并,（为sum[i-1][j-1][k-1],不合并就是前一组所有的方案）然后加起来——》》<br>得f[i][j][k]=（a[i]==a[j]）（sum[i-1][j-1][k-1]+f[i-1][j-1][k]）;<br>不匹配是就是零，因为f是用了的情况，不匹配就没法用了<br>那么处理出f[i][j][k]来了。<br>sum[i][j][k]就等于上一串的的总方案（sum[i-1][j][k]）加上用用这个串的(f[i][j][k])<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#define p 1000000007</span><br><span class="line">using namespace std; </span><br><span class="line">long long f[201][201],sum[201][201],n,m,k;</span><br><span class="line">char a[1001],b[201];</span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m&gt;&gt;k&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    sum[0][0]=1;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">      for(int j=m;j&gt;=1;j--)</span><br><span class="line">        for(int q=k;q&gt;=1;q--)</span><br><span class="line">        &#123;</span><br><span class="line">        	if(a[i-1]==b[j-1])</span><br><span class="line">        	f[j][q]=(f[j-1][q]+sum[j-1][q-1])%p;</span><br><span class="line">        	else f[j][q]=0;</span><br><span class="line">        	</span><br><span class="line">        	sum[j][q]+=f[j][q];</span><br><span class="line">        	sum[i][q]%=p;</span><br><span class="line">   		&#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">              </span><br><span class="line">    cout&lt;&lt;sum[m][k];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/06/11/网线切割/" title="网线切割">网线切割</a></h2>
+                <p class="excerpt">
+                
+                对网线的数目二分答案，个数数找小了就网线变小，找大了就变大12345678910111213141516171819202122232425262728293031323334#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;using namespace 
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-06-11T02:25:20.000Z" class="post-list__meta--date date">2017-06-11</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/二分答案/">二分答案</a>
+</span><a class="btn-border-small" href="/2017/06/11/网线切割/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
   
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/05/二叉搜索树/" title="link to post.title">二叉搜索树</a></h2>
-      <p class="excerpt">
-    
-      12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-05T10:09:10.000Z" class="post-list__meta--date date">2017-06-05</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/模板/">模板</a>
-</span><a class="btn-border-small" href="/2017/06/05/二叉搜索树/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
+</section>
+
   
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/05/博客建成/" title="link to post.title">博客建成</a></h2>
-      <p class="excerpt">
-    
-      2017-6-5 博客建成感谢almzsyp
-
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-05T08:51:19.000Z" class="post-list__meta--date date">2017-06-05</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/博客/">博客</a>
-</span><a class="btn-border-small" href="/2017/06/05/博客建成/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
-
-
-  <nav class="pagination" role="navigation">
-    
-      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/archives/2017/06/page/7/">← 最近</a>
-    
-    <span class="pagination__page-number" > 8 / 8 </span>
-    
-  </nav>
-
- <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    }); 
-    
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "96c7315d934b43bfaa12ffd064d52d5e",
+    target: "cloud-tie-wrapper"
+  };
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 
 
             <footer class="footer">
