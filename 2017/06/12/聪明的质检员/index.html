@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>子串 | wspl09876</title>
+    <title>聪明的质检员 | wspl09876</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="齐河一中蒟蒻一只">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="子串 | wspl09876">
+    <meta name="twitter:title" content="聪明的质检员 | wspl09876">
     <meta name="twitter:description" content="齐河一中蒟蒻一只">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="子串 | wspl09876">
+    <meta property="og:title" content="聪明的质检员 | wspl09876">
     <meta property="og:description" content="齐河一中蒟蒻一只">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="wspl09876" href="/atom.xml">
     
 
-    <link rel="canonical" href="https://hychychyc.github.io/2017/06/11/子串/"/>
+    <link rel="canonical" href="https://hychychyc.github.io/2017/06/12/聪明的质检员/"/>
 
                  
 </head>
@@ -141,19 +141,19 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2017-06-11T09:44:45.000Z" class="post-list__meta--date date">2017-06-11</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/dp/">dp</a>
+      <time datetime="2017-06-12T02:39:24.000Z" class="post-list__meta--date date">2017-06-12</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/二分答案-前缀和优化/">二分答案+前缀和优化</a>
  </span>
       <span class="page-pv">
       &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">子串</h1>
+    <h1 class="post-title">聪明的质检员</h1>
   </header>
 
   <section class="post">
-    <p>这个题我搞了好久，终于算是明白了点吧<br>看了很多大神的博客，总结出来了一些做法，不知对不对，就写一些吧。<br>先定义两个数组<br>sum[i][j][k]就是a串前i个字母,b串前j个字母的方案总数！！！！，就是结果<br>f[i][j][k]是用第i个字母用的方案数。<br>当匹配时：<br>因为第i个可以和前i-1合并为一块(但这是方案数不变,因为组数相同，为f[i-1][j-1][k]),也可以不合并,（为sum[i-1][j-1][k-1],不合并就是前一组所有的方案）然后加起来——》》<br>得f[i][j][k]=（a[i]==a[j]）（sum[i-1][j-1][k-1]+f[i-1][j-1][k]）;<br>不匹配是就是零，因为f是用了的情况，不匹配就没法用了<br>那么处理出f[i][j][k]来了。<br>sum[i][j][k]就等于上一串的的总方案（sum[i-1][j][k]）加上用用这个串的(f[i][j][k])<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#define p 1000000007</span><br><span class="line">using namespace std; </span><br><span class="line">long long f[201][201],sum[201][201],n,m,k;</span><br><span class="line">char a[1001],b[201];</span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m&gt;&gt;k&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    sum[0][0]=1;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">      for(int j=m;j&gt;=1;j--)</span><br><span class="line">        for(int q=k;q&gt;=1;q--)</span><br><span class="line">        &#123;</span><br><span class="line">        	if(a[i-1]==b[j-1])</span><br><span class="line">        	f[j][q]=(f[j-1][q]+sum[j-1][q-1])%p;</span><br><span class="line">        	else f[j][q]=0;</span><br><span class="line">        	</span><br><span class="line">        	sum[j][q]+=f[j][q];</span><br><span class="line">        	sum[i][q]%=p;</span><br><span class="line">   		&#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">              </span><br><span class="line">    cout&lt;&lt;sum[m][k];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <p>二分+前缀和优化，不优化就是o（nmlogn）了<br>对参数w进行二分答案，通过w对y进行计算，如果找大了，就说明参数w找小了，答案在mid右面，找小了反之。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt; </span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#define LL long long</span><br><span class="line">using namespace std;</span><br><span class="line">LL sum[299999],cnt[299999];</span><br><span class="line">int n,m;LL s;LL minn=99999999999;int ll[299999],rr[299999],w[299999],v[299999];</span><br><span class="line">LL checkw(int x)&#123;</span><br><span class="line">    LL ans=0;</span><br><span class="line">    memset(sum,0,sizeof(sum));</span><br><span class="line">	memset(cnt,0,sizeof(cnt));</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">    if(w[i]&gt;=x) &#123;</span><br><span class="line">        sum[i]=sum[i-1]+v[i];</span><br><span class="line">        cnt[i]=cnt[i-1]+1;</span><br><span class="line">    &#125;</span><br><span class="line">    else cnt[i]=cnt[i-1],sum[i]=sum[i-1];//前缀和</span><br><span class="line">    for(int i=1;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ans+=(sum[rr[i]]-sum[ll[i]-1])*(cnt[rr[i]]-cnt[ll[i]-1]);//算y</span><br><span class="line">    &#125;</span><br><span class="line">    minn=min(minn,((s-ans)&gt;=0)?(s-ans):(ans-s));//找最优解</span><br><span class="line">    return ans;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    scanf(&quot;%d%d%lld&quot;,&amp;n,&amp;m,&amp;s);</span><br><span class="line">    int l=1,r;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        scanf(&quot;%d%d&quot;,&amp;w[i],&amp;v[i]); </span><br><span class="line">        r=max(r,w[i]);//找r的最大限度</span><br><span class="line">    &#125;</span><br><span class="line">    r+=5;//防止二分出错</span><br><span class="line">    for(int i=1;i&lt;=m;i++)</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;ll[i],&amp;rr[i]);</span><br><span class="line">    while(l&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        int mid=(r+l)&gt;&gt;1;</span><br><span class="line">        LL y=checkw(mid);</span><br><span class="line">        if(y&gt;s) l=mid+1;</span><br><span class="line">        else if(y&lt;s) r=mid-1;</span><br><span class="line">        else &#123;printf(&quot;0&quot;);return 0;&#125;</span><br><span class="line">    &#125;//二分答案</span><br><span class="line">    </span><br><span class="line">    printf(&quot;%lld&quot;,minn);</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
   </section>
 
@@ -162,34 +162,20 @@
 <section class="read-more">
            
     
-               
-            <div class="read-more-item">
-                <span class="read-more-item-dim">最近的文章</span>
-                <h2 class="post-list__post-title post-title"><a href="/2017/06/12/聪明的质检员/" title="聪明的质检员">聪明的质检员</a></h2>
-                <p class="excerpt">
-                
-                二分+前缀和优化，不优化就是o（nmlogn）了对参数w进行二分答案，通过w对y进行计算，如果找大了，就说明参数w找小了，答案在mid右面，找小了反之。12345678910111213141516171819202122232425262728293031323334353637383940414
-                &hellip;
-                </p>
-                <div class="post-list__meta"><time datetime="2017-06-12T02:39:24.000Z" class="post-list__meta--date date">2017-06-12</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/二分答案-前缀和优化/">二分答案+前缀和优化</a>
-</span><a class="btn-border-small" href="/2017/06/12/聪明的质检员/">继续阅读</a></div>
-                           
-            </div>
         
         
                
             <div class="read-more-item">
                 <span class="read-more-item-dim">更早的文章</span>
-                <h2 class="post-list__post-title post-title"><a href="/2017/06/11/网线切割/" title="网线切割">网线切割</a></h2>
+                <h2 class="post-list__post-title post-title"><a href="/2017/06/11/子串/" title="子串">子串</a></h2>
                 <p class="excerpt">
                 
-                对网线的数目二分答案，个数数找小了就网线变小，找大了就变大12345678910111213141516171819202122232425262728293031323334#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;using namespace 
+                这个题我搞了好久，终于算是明白了点吧看了很多大神的博客，总结出来了一些做法，不知对不对，就写一些吧。先定义两个数组sum[i][j][k]就是a串前i个字母,b串前j个字母的方案总数！！！！，就是结果f[i][j][k]是用第i个字母用的方案数。当匹配时：因为第i个可以和前i-1合并为一块(但这是方
                 &hellip;
                 </p>
-                <div class="post-list__meta"><time datetime="2017-06-11T02:25:20.000Z" class="post-list__meta--date date">2017-06-11</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/二分答案/">二分答案</a>
-</span><a class="btn-border-small" href="/2017/06/11/网线切割/">继续阅读</a></div>
+                <div class="post-list__meta"><time datetime="2017-06-11T09:44:45.000Z" class="post-list__meta--date date">2017-06-11</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/dp/">dp</a>
+</span><a class="btn-border-small" href="/2017/06/11/子串/">继续阅读</a></div>
                        
             </div>
         
