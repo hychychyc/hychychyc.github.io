@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>lowbit | wspl09876</title>
+    <title>k&#39;th number | wspl09876</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="齐河一中蒟蒻一只">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="lowbit | wspl09876">
+    <meta name="twitter:title" content="k&#39;th number | wspl09876">
     <meta name="twitter:description" content="齐河一中蒟蒻一只">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="lowbit | wspl09876">
+    <meta property="og:title" content="k&#39;th number | wspl09876">
     <meta property="og:description" content="齐河一中蒟蒻一只">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="wspl09876" href="/atom.xml">
     
 
-    <link rel="canonical" href="https://hychychyc.github.io/2017/07/23/lowbit/"/>
+    <link rel="canonical" href="https://hychychyc.github.io/2017/07/23/kaa-thnumber/"/>
 
                  
 </head>
@@ -141,25 +141,19 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2017-07-23T03:11:20.000Z" class="post-list__meta--date date">2017-07-23</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/分治/">分治</a>
+      <time datetime="2017-07-23T09:59:42.000Z" class="post-list__meta--date date">2017-07-23</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/折半搜索-twopoint-二分/">折半搜索+twopoint+二分</a>
  </span>
       <span class="page-pv">
       &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">lowbit</h1>
+    <h1 class="post-title">k&#39;th number</h1>
   </header>
 
   <section class="post">
-    <p>这个题先把它搞成二进制<br>可以发现异或出来在lowbit找的是最后一位为一的数的价值，而异或出来只有两种情况，1或0,<br>所以一开始把所有书分成两份，同分之间没有价值，只有异份之间有价值，且价值为2^t,就是最后一位不同的价值，找出同分异分之间有多少组合，就是多少个2^t<br>一步一步分，最后直到不能分了<br>像这样<br>1 2 3 4 5</p>
-<p>001<br>010<br>011<br>100<br>101</p>
-<p>001   010<br>011   100<br>101</p>
-<p>3<em>2</em>2   <em>   1  =  12           010   100<br>                          1</em>1<em>2   </em>  2=4<br>011  001<br>     101</p>
-<p>1<em>2</em>2   *   2  =  8</p>
-<p>101  001</p>
-<p>1<em>1</em>2   *   4  =  8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#define p 1000000007</span><br><span class="line">using namespace std;</span><br><span class="line">#define for(i,x,y) for(int i=x;i&lt;=y;i++)</span><br><span class="line">#define ll long long </span><br><span class="line">int m;</span><br><span class="line">int a[110011];ll ans;int b[110099];</span><br><span class="line">#define D &quot;%d&quot;</span><br><span class="line">void work(int n,int x)</span><br><span class="line">&#123;</span><br><span class="line">	if(n&lt;=1||x&gt;29) return ;</span><br><span class="line">	int t=0;</span><br><span class="line">	for(i,1,n)</span><br><span class="line">	if(a[i]&amp;(1&lt;&lt;x))</span><br><span class="line">	b[++t]=a[i];</span><br><span class="line">	int w=t;</span><br><span class="line">	for(i,1,n)</span><br><span class="line">	if(!(a[i]&amp;(1&lt;&lt;x)))</span><br><span class="line">	b[++w]=a[i];</span><br><span class="line">	(ans+=1ll*t*(w-t)*2*(1&lt;&lt;x))%p;</span><br><span class="line">	for(i,1,t)</span><br><span class="line">	a[i]=b[i];</span><br><span class="line">	work(t,x+1);</span><br><span class="line">	for(i,t+1,w)</span><br><span class="line">	a[i-t]=b[i];</span><br><span class="line">	work(w-t,x+1);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	freopen(&quot;lowbit.in&quot;,&quot;r&quot;,stdin);</span><br><span class="line">	freopen(&quot;lowbit.out&quot;,&quot;w&quot;,stdout);</span><br><span class="line">	scanf(D,&amp;m);</span><br><span class="line">	for(i,1,m)</span><br><span class="line">	scanf(D,&amp;a[i]);</span><br><span class="line">	</span><br><span class="line">	work(m,0);</span><br><span class="line">	printf(&quot;%lld&quot;,ans%p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <p>有n个数，共有2^n个子集，一个子集的值看做其所有数的和。<br>求这2^n个子集中第K大的子集。<br>n&lt;=35。<br>首先我们可以通过meet in the middle的做法，将其分成两部分。<br>二分答案后用two point统计满足条件的方案总数。<br>与k进行比较即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define for(i,x,y) for(int i=x;i&lt;=y;i++)</span><br><span class="line">#define  D &quot;%d&quot;</span><br><span class="line">int n;int k,s,t=1,t2=1;</span><br><span class="line">int a[1999],b[1999],c[1999],d[1999];</span><br><span class="line">void dfs(int x,int ans)&#123;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	if(x&gt;=n/2+1) return ;</span><br><span class="line">	c[++t]=ans+a[x];</span><br><span class="line">	dfs(x+1,a[x]+ans);</span><br><span class="line">	dfs(x+1,ans);</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">void dfs2(int x,int ans)&#123;</span><br><span class="line">	if(x&gt;=n+1) return ;</span><br><span class="line">	</span><br><span class="line">	d[++t2]=ans+a[x];</span><br><span class="line">	dfs2(x+1,a[x]+ans);</span><br><span class="line">	dfs2(x+1,ans);</span><br><span class="line">&#125;</span><br><span class="line">int check(int x)</span><br><span class="line">&#123;</span><br><span class="line">	int ans=0;int t3=t2;</span><br><span class="line">	for(i,1,t)</span><br><span class="line">	&#123;</span><br><span class="line">		while(c[i]+d[t3]&gt;=x&amp;&amp;t3&gt;0)</span><br><span class="line">		t3--;</span><br><span class="line">		if(t3==0) break;</span><br><span class="line">		ans+=t3;</span><br><span class="line">	&#125;</span><br><span class="line">	return ans;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	scanf(D D,&amp;n,&amp;k);</span><br><span class="line">	for(i,1,n)</span><br><span class="line">	&#123;</span><br><span class="line">		scanf(D,&amp;a[i]);</span><br><span class="line">		s+=a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	c[1]=0;</span><br><span class="line">	d[1]=0;</span><br><span class="line">	dfs(1,0);</span><br><span class="line">	dfs2(n/2+1,0);</span><br><span class="line">	sort(c+1,c+t+1);</span><br><span class="line">	sort(d+1,d+t2+1);</span><br><span class="line">	/*for(i,1,t)</span><br><span class="line">	printf(D &quot; &quot;,c[i]);</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	for(i,1,t2)</span><br><span class="line">	printf(D &quot; &quot;,d[i]);*/</span><br><span class="line">	int l=0,r=s+5;</span><br><span class="line">	while(l&lt;=r)</span><br><span class="line">	&#123;</span><br><span class="line">		int mid=(l+r)&gt;&gt;1;</span><br><span class="line">		int w=check(mid);</span><br><span class="line">		if(w&gt;(1&lt;&lt;n)-k) r=mid-1;</span><br><span class="line">		else l=mid+1;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(D,r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
   </section>
 
@@ -168,9 +162,11 @@
 <section class="read-more">
            
     
+        
+        
                
             <div class="read-more-item">
-                <span class="read-more-item-dim">最近的文章</span>
+                <span class="read-more-item-dim">更早的文章</span>
                 <h2 class="post-list__post-title post-title"><a href="/2017/07/23/twopoint/" title="twopoint">twopoint</a></h2>
                 <p class="excerpt">
                 
@@ -180,23 +176,6 @@
                 <div class="post-list__meta"><time datetime="2017-07-23T09:58:54.000Z" class="post-list__meta--date date">2017-07-23</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
   <a class="tag-link" href="/tags/技巧/">技巧</a>
 </span><a class="btn-border-small" href="/2017/07/23/twopoint/">继续阅读</a></div>
-                           
-            </div>
-        
-        
-               
-            <div class="read-more-item">
-                <span class="read-more-item-dim">更早的文章</span>
-                <h2 class="post-list__post-title post-title"><a href="/2017/07/16/清北day2/" title="啦啦啦啦啦">啦啦啦啦啦</a></h2>
-                <p class="excerpt">
-                
-                stick木棍(stick)
-思路：先把奇数个的削掉，因为奇数个的不可能组成长方形，削掉有可能然后削完的用贪心，最大的组成正方形一定最大。123456789101112131415161718192021222324252627#include&amp;lt;cstdio&amp;gt;#include&amp;lt;io
-                &hellip;
-                </p>
-                <div class="post-list__meta"><time datetime="2017-07-16T08:19:59.000Z" class="post-list__meta--date date">2017-07-16</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/爆搜题/">爆搜题</a>
-</span><a class="btn-border-small" href="/2017/07/16/清北day2/">继续阅读</a></div>
                        
             </div>
         
