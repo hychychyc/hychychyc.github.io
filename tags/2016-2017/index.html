@@ -143,112 +143,21 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/最大正方形/" title="link to post.title">最大正方形</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2017/07/26/day4/" title="link to post.title">day4</a></h2>
       <p class="excerpt">
     
-      dp处理一个矩阵前缀和，就可以O(n)的求出矩阵的和了，而且只有和为完全平方数才是正方形，因为数据只有1吗，要是不是一的话就不容易了这样再枚举一个起点，和一个边长就是任意一个正方形了，再优化剪枝一下，就可以0ms过了1234567891011121314151617181920212223242526272829303132#include&amp;lt;cstdio&amp;gt;#include&amp;lt;ios
+      alien飞船降落问题矩阵前缀和+枚举求出前缀和，暴力枚举每一个子矩阵的和，是0就可以降落注意有正方形飞船，长度不等于点12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152#include&amp;lt;cstdio&amp;gt;#include&amp;lt;iostream&amp;gt
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T06:57:39.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/dp/">dp</a>
-</span><a class="btn-border-small" href="/2017/06/07/最大正方形/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/过河/" title="link to post.title">过河</a></h2>
-      <p class="excerpt">
-    
-      这道题最简单的dp，动态转移方程很好推，因为它是由i-s~t转移来的，所以动态转移方程为dp[i]=min(dp[i-s~t])+q[i]然而这个题的数据太大了。。。。。10^9不得不考虑一些没用的操作所以就考虑一个问题这个题的石子数太少了，在一定的范围内，你不管怎样跳，石子数也不会增加，所以你就可以把多余的t弄掉，这样就是状压dp了，把一定的没用的范围压起来,这样数据就小点了,能过了123456
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T06:52:48.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/状压dp/">状压dp</a>
-</span><a class="btn-border-small" href="/2017/06/07/过河/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/编辑距离/" title="link to post.title">编辑距离</a></h2>
-      <p class="excerpt">
-    
-      动态转移方程按三个步骤来，就是从f[i-1][j-1],f[i-1][j],f[i][j-1]+1转移过来所以就是f[i][j]=min(f[i-1][j-1],f[i-1][j],f[i][j-1])+1123456789101112131415161718192021222324252627282930#include&amp;lt;cstdio&amp;gt;#include&amp;lt;cstring&amp;gt; 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T06:51:17.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/dp/">dp</a>
-</span><a class="btn-border-small" href="/2017/06/07/编辑距离/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/统计单词个数/" title="link to post.title">统计单词个数</a></h2>
-      <p class="excerpt">
-    
-      这个题和之前一个乘法最大思路差不多，就是如果要划分k份之前已经划分了k-1份，划分为k份的就是由，k-1推来的再加上第k份的单词个数，所以就枚举前面k-1分到的位置，是k~当前位置，取最大值，就是结果了然后单词个数就在线统计就行了，因为以一个数为首字母的只能用一次，所以找最短的单词记下来就行了。1234567891011121314151617181920212223242526272829303
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T06:27:41.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/dp/">dp</a>
-</span><a class="btn-border-small" href="/2017/06/07/统计单词个数/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/05/二叉搜索树/" title="link to post.title">二叉搜索树</a></h2>
-      <p class="excerpt">
-    
-      12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-05T10:09:10.000Z" class="post-list__meta--date date">2017-06-05</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/模板/">模板</a>
-</span><a class="btn-border-small" href="/2017/06/05/二叉搜索树/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/05/博客建成/" title="link to post.title">博客建成</a></h2>
-      <p class="excerpt">
-    
-      2017-6-5 博客建成感谢almzsyp
-
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-05T08:51:19.000Z" class="post-list__meta--date date">2017-06-05</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/博客/">博客</a>
-</span><a class="btn-border-small" href="/2017/06/05/博客建成/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/03/17/Hello-World-0/" title="link to post.title">Hello World</a></h2>
-      <p class="excerpt">
-    
-      1234567#include &amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;	cout&amp;lt;&amp;lt;&amp;quot;Hello World!&amp;quot;;	return 0;&amp;#125;
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-03-17T08:59:05.000Z" class="post-list__meta--date date">2017-03-17</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2017/03/17/Hello-World-0/">继续阅读</a></div>
+      <div class="post-list__meta"><time datetime="2017-07-26T03:24:02.000Z" class="post-list__meta--date date">2017-07-26</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/2016-2017/">2016~2017</a>
+</span><a class="btn-border-small" href="/2017/07/26/day4/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
   </ol>
 
-
-  <nav class="pagination" role="navigation">
-    
-      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/archives/2017/page/8/">← 最近</a>
-    
-    <span class="pagination__page-number" > 9 / 9 </span>
-    
-  </nav>
 
  <script type="text/x-mathjax-config">
     MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },

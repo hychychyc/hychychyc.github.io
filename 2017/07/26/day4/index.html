@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>day4 | wspl09876</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="齐河一中蒟蒻一只">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="day4 | wspl09876">
+    <meta name="twitter:description" content="齐河一中蒟蒻一只">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="day4 | wspl09876">
+    <meta property="og:description" content="齐河一中蒟蒻一只">
+
+    
+    <meta name="author" content="wspl09876">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="wspl09876" href="/atom.xml">
+    
+
+    <link rel="canonical" href="https://hychychyc.github.io/2017/07/26/day4/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 wspl09876 的主页"><img src="/images/hhh.jpg" width="80" alt="wspl09876 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for wspl09876">wspl09876</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">hyc</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">齐河一中蒟蒻一只</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/">黄金屋</a></li>
+            
+              <li class="navigation__item"><a href="/">时光机</a></li>
+            
+              <li class="navigation__item"><a href="/about">关于我</a></li>
+            
+              <li class="navigation__item"><a href="/tags">友链</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/hychychyc" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-disabled"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-07-26T03:24:02.000Z" class="post-list__meta--date date">2017-07-26</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/2016-2017/">2016~2017</a>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">day4</h1>
+  </header>
+
+  <section class="post">
+    <p>alien<br>飞船降落问题<br>矩阵前缀和+枚举<br>求出前缀和，暴力枚举每一个子矩阵的和，是0就可以降落<br>注意有正方形飞船，长度不等于点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define D &quot;%d&quot;</span><br><span class="line">#define for(i,x,y) for(int i=x;i&lt;=y;i++)</span><br><span class="line">#define prf printf</span><br><span class="line">#define scf scanf</span><br><span class="line">int n,m,r,c,ans;</span><br><span class="line">int a[1999][1999],s[1999][1999];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	freopen(&quot;alien.in&quot;,&quot;r&quot;,stdin);</span><br><span class="line">	freopen(&quot;alien.out&quot;,&quot;w&quot;,stdout);</span><br><span class="line">	scf(D D D D,&amp;n,&amp;m,&amp;r,&amp;c);</span><br><span class="line">	for(i,1,r)</span><br><span class="line">	&#123;</span><br><span class="line">		int x,y;</span><br><span class="line">		scf(D D,&amp;x,&amp;y);</span><br><span class="line">		a[x][y]=1;</span><br><span class="line">	&#125;</span><br><span class="line">	for(i,1,n)</span><br><span class="line">	 for(j,1,m)	</span><br><span class="line">	 	s[i][j]=s[i-1][j]+s[i][j-1]-s[i-1][j-1]+a[i][j];</span><br><span class="line">	for(k,1,c)</span><br><span class="line">	&#123;</span><br><span class="line">		int x,y;</span><br><span class="line">		ans=0;</span><br><span class="line">		scf(D D,&amp;x,&amp;y);</span><br><span class="line">		for(i,1,n)</span><br><span class="line">	     for(j,1,m)</span><br><span class="line">	    if(i+x-1&lt;=n&amp;&amp;j+y-1&lt;=m)</span><br><span class="line">	 	&#123;</span><br><span class="line">	 		int w=s[i+x-1][j+y-1]-s[i-1][j+y-1]-s[i+x-1][j-1]+s[i-1][j-1];</span><br><span class="line">	 		if(w==0)</span><br><span class="line">	 		ans++;</span><br><span class="line">	 	&#125;</span><br><span class="line">		if(x!=y)</span><br><span class="line">	 	&#123;</span><br><span class="line">	 		for(i,1,n)</span><br><span class="line">	         for(j,1,m)</span><br><span class="line">	    	if(i+y-1&lt;=n&amp;&amp;j+x-1&lt;=m)</span><br><span class="line">	 		&#123;</span><br><span class="line">	 		int w=s[i+y-1][j+x-1]-s[i-1][j+x-1]-s[i+y-1][j-1]+s[i-1][j-1];</span><br><span class="line">	 		if(w==0)</span><br><span class="line">	 		ans++;</span><br><span class="line">	 		&#125;	</span><br><span class="line">	 	&#125;</span><br><span class="line">	 	prf(D &quot;\n&quot;,ans);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>game<br>博弈题<br>有n个点，m条边<br>两个人给点染色<br>得到点的权值和边的权值，求最优解的差（保证点偶数个）<br>直接均摊<br>他们都是最优解<br>所以不会看到另一个人得到最多的<br>所以一定会然一条边的另一边<br>最后排序减一下就行了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define D &quot;%d&quot;</span><br><span class="line">#define for(i,x,y,z) for(int i=x;i&lt;=y;i+=z)</span><br><span class="line">#define prf printf</span><br><span class="line">#define scf scanf</span><br><span class="line">int n,m;</span><br><span class="line">double w[19199],ans;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	freopen(&quot;.in&quot;,&quot;r&quot;,stdin);</span><br><span class="line">	freopen(&quot;.out&quot;,&quot;w&quot;,stdout);</span><br><span class="line">	scf(D D,&amp;n,&amp;m);</span><br><span class="line">	for(i,1,n,1)</span><br><span class="line">		scf(&quot;%lf&quot;,&amp;w[i]);</span><br><span class="line">	for(i,1,m,1)</span><br><span class="line">	&#123;</span><br><span class="line">		int x,y;</span><br><span class="line">		double z;</span><br><span class="line">		scf(D D &quot;%lf&quot;,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		w[x]+=z/2.0;</span><br><span class="line">		w[y]+=z/2.0;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(w+1,w+n+1);</span><br><span class="line">	for(i,1,n,2)</span><br><span class="line">		ans+=w[i+1]-w[i];</span><br><span class="line">	prf(D,int (ans));</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>fortress<br>大爆搜<br><img src="http://img.blog.csdn.net/20170726111608124?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzY3OTk5NDM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>没有什么技巧<br>就是一个超级大爆搜花了我两小时才调完<br>先打个表，将读入的问题搞好<br>再用邻接表弄，没墙就连上边<br>dfs搜有多少房间，搜最大的就先那种染色题一样<br>然后再删边添边，一次一次爆搜，找最大的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int a[99][99],c[2600][2699],f[9999],ans,m,n,x,y;</span><br><span class="line">char z;</span><br><span class="line">int nex[99999],head[9999],to[9999],tot,max1;</span><br><span class="line">int up(int x,int y)</span><br><span class="line">&#123;</span><br><span class="line">	to[tot]=0;</span><br><span class="line">	c[y][x]=0;</span><br><span class="line">	head[y]=nex[tot];</span><br><span class="line">	nex[tot]=0;</span><br><span class="line">	tot--;</span><br><span class="line">	to[tot]=0;</span><br><span class="line">	c[x][y]=0;</span><br><span class="line">	head[x]=nex[tot];</span><br><span class="line">	nex[tot]=0;</span><br><span class="line">	tot--;</span><br><span class="line">&#125;</span><br><span class="line">int add(int x,int y)</span><br><span class="line">&#123;</span><br><span class="line">	tot++;</span><br><span class="line">	to[tot]=y;</span><br><span class="line">	c[x][y]=1;</span><br><span class="line">	nex[tot]=head[x];</span><br><span class="line">	head[x]=tot;</span><br><span class="line">	tot++;</span><br><span class="line">	to[tot]=x;</span><br><span class="line">	c[y][x]=1;</span><br><span class="line">	nex[tot]=head[y];</span><br><span class="line">	head[y]=tot;</span><br><span class="line">&#125;</span><br><span class="line">int dfs(int x)</span><br><span class="line">&#123;</span><br><span class="line">	for(int i=head[x];i;i=nex[i])</span><br><span class="line">	&#123;</span><br><span class="line">		int tmp=to[i];</span><br><span class="line">		if(!f[tmp])</span><br><span class="line">		&#123;</span><br><span class="line">			ans++;</span><br><span class="line">			f[tmp]=1;</span><br><span class="line">			dfs(tmp);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int cnt;</span><br><span class="line">int b[16][5]=&#123;</span><br><span class="line">	4,1,2,4,8,</span><br><span class="line">	3,2,4,8,0,</span><br><span class="line">	3,1,4,8,0,</span><br><span class="line">	2,4,8,0,0,</span><br><span class="line">	3,1,2,8,0,</span><br><span class="line">	2,2,8,0,0,</span><br><span class="line">	2,1,8,0,0,</span><br><span class="line">	1,8,0,0,0,</span><br><span class="line">	3,1,2,4,0,</span><br><span class="line">	2,2,4,0,0,</span><br><span class="line">	2,1,4,0,0,</span><br><span class="line">	1,4,0,0,0,</span><br><span class="line">	2,1,2,0,0,</span><br><span class="line">	1,2,0,0,0,</span><br><span class="line">	1,1,0,0,0,</span><br><span class="line">	0,0,0,0,0,</span><br><span class="line">&#125;;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	freopen(&quot;fortress.in&quot;,&quot;r&quot;,stdin);</span><br><span class="line">	freopen(&quot;fortress.out&quot;,&quot;w&quot;,stdout);</span><br><span class="line">	scanf(&quot;%d%d&quot;,&amp;m,&amp;n);int t=0;</span><br><span class="line">	for(int i=1;i&lt;=n;i++)</span><br><span class="line">	for(int j=1;j&lt;=m;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		++t;</span><br><span class="line">		a[i][j]=t;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=1;i&lt;=n;i++)</span><br><span class="line">	for(int j=1;j&lt;=m;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		int x;</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">		for(int k=1;k&lt;=b[x][0];k++)</span><br><span class="line">		&#123;</span><br><span class="line">			if(b[x][k]==2&amp;&amp;i-1&gt;=1)</span><br><span class="line">			add(a[i][j],a[i-1][j]);</span><br><span class="line">			if(b[x][k]==1&amp;&amp;j-1&gt;=1)</span><br><span class="line">			add(a[i][j],a[i][j-1]);</span><br><span class="line">			if(b[x][k]==8&amp;&amp;i+1&lt;=n)</span><br><span class="line">			add(a[i][j],a[i+1][j]);</span><br><span class="line">			if(b[x][k]==4&amp;&amp;j+1&lt;=m)</span><br><span class="line">			add(a[i][j],a[i][j+1]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=1;i&lt;=t;i++)</span><br><span class="line">	if(!f[i])</span><br><span class="line">	f[i]=1,cnt++,ans=1,dfs(i),max1=max(ans,max1);</span><br><span class="line">	printf(&quot;%d\n%d\n&quot;,cnt,max1);max1=0;</span><br><span class="line">	for(int j=1;j&lt;=m;j++)</span><br><span class="line">	for(int i=n;i&gt;=1;i--)</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		memset(f,0,sizeof(f));</span><br><span class="line">		if(!c[a[i][j]][a[i-1][j]]&amp;&amp;i-1&gt;=1)</span><br><span class="line">		&#123;</span><br><span class="line">			add(a[i][j],a[i-1][j]);</span><br><span class="line">			for(int k=1;k&lt;=n;k++)</span><br><span class="line">			for(int q=1;q&lt;=m;q++)</span><br><span class="line">			&#123;</span><br><span class="line">				ans=0;</span><br><span class="line">				dfs(a[i][j]);</span><br><span class="line">				if(max1&lt;ans)</span><br><span class="line">				&#123;</span><br><span class="line">					max1=ans;</span><br><span class="line">					x=i,y=j,z=&apos;N&apos;;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			up(a[i][j],a[i-1][j]);</span><br><span class="line">		&#125;</span><br><span class="line">		memset(f,0,sizeof(f));</span><br><span class="line">		if(!c[a[i][j]][a[i][j+1]]&amp;&amp;j+1&lt;=m)</span><br><span class="line">		&#123;</span><br><span class="line">			add(a[i][j],a[i][j+1]);</span><br><span class="line">			for(int k=1;k&lt;=n;k++)</span><br><span class="line">			for(int q=1;q&lt;=m;q++)</span><br><span class="line">			&#123;</span><br><span class="line">				ans=0;</span><br><span class="line">				dfs(a[i][j]);</span><br><span class="line">				if(max1&lt;ans)</span><br><span class="line">				&#123;</span><br><span class="line">					max1=ans;</span><br><span class="line">					x=i,y=j,z=&apos;E&apos;;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			up(a[i][j],a[i][j+1]);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;%d\n%d %d %c&quot;,max1,x,y,z);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/07/25/部落冲突/" title="部落冲突">部落冲突</a></h2>
+                <p class="excerpt">
+                
+                这题弄k各部落就是把它合并成k个集合所以按最小的边合并的解一定是最优的这就借用了k算法的思想12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152#include&amp;
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-07-25T08:14:43.000Z" class="post-list__meta--date date">2017-07-25</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/最小生成树并查集/">最小生成树并查集</a>
+</span><a class="btn-border-small" href="/2017/07/25/部落冲突/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "96c7315d934b43bfaa12ffd064d52d5e",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2017 - 本站使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题,
+        由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+    </span>
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-78918255-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9cdad07c755fa23f6aced510c6760e87";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+</body>
+</html>
