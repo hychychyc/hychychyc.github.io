@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>dp专题 | wspl09876</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="齐河一中蒟蒻一只">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="dp专题 | wspl09876">
+    <meta name="twitter:description" content="齐河一中蒟蒻一只">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="dp专题 | wspl09876">
+    <meta property="og:description" content="齐河一中蒟蒻一只">
+
+    
+    <meta name="author" content="wspl09876">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="wspl09876" href="/atom.xml">
+    
+
+    <link rel="canonical" href="https://hychychyc.github.io/2017/08/08/dp专题/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 wspl09876 的主页"><img src="/images/hhh.jpg" width="80" alt="wspl09876 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for wspl09876">wspl09876</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">hyc</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">齐河一中蒟蒻一只</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/">黄金屋</a></li>
+            
+              <li class="navigation__item"><a href="/">时光机</a></li>
+            
+              <li class="navigation__item"><a href="/about">关于我</a></li>
+            
+              <li class="navigation__item"><a href="/tags">友链</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/hychychyc" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-disabled"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-08-08T09:55:11.000Z" class="post-list__meta--date date">2017-08-08</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/dp/">dp</a>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">dp专题</h1>
+  </header>
+
+  <section class="post">
+    <p>互不侵犯的king<br>状压dp题<br>每一行放不放国王可以用1010010来表示<br>所以每一行的状态可以看成一个二进制数<br>这样n是小于9的，可以把小于2^n，（因为2^9是512，很小）的数打表存出来<br>把自己和自己冲突的筛掉，然后记下有多少1，判断他们是否冲突。<br>预处理完了，接下来是dp了<br>动态转移方程：<br>dp[i][q+t[j]][a[j]]=Σdp[i-1][q][a[i]]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int cnt,ans;</span><br><span class="line">int n,k,a[19999],dp[19][199][600];</span><br><span class="line">int f[1999][1999],t[19999];</span><br><span class="line">int main()&#123;</span><br><span class="line">	scanf(&quot;%d%d&quot;,&amp;n,&amp;k);</span><br><span class="line">	</span><br><span class="line">	int w=(1&lt;&lt;n)-1;</span><br><span class="line">	for(int i=0;i&lt;=w;i++)</span><br><span class="line">	if((((i&gt;&gt;1)&amp;i)==0)&amp;&amp;(((i&lt;&lt;1)&amp;i)==0))</span><br><span class="line">	a[++cnt]=i;</span><br><span class="line">	</span><br><span class="line">	for(int i=1;i&lt;=cnt;i++)</span><br><span class="line">	&#123;</span><br><span class="line">	</span><br><span class="line">		int x=a[i];</span><br><span class="line">		while(x)</span><br><span class="line">		&#123;</span><br><span class="line">			t[i]+=(x&amp;1);</span><br><span class="line">			x/=2;</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	for(int i=1;i&lt;=cnt;i++)</span><br><span class="line">	 for(int j=1;j&lt;=cnt;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		if(((a[i]&amp;a[j])==0)&amp;&amp;(((a[i]&gt;&gt;1)&amp;a[j])==0)&amp;&amp;(((a[i]&lt;&lt;1)&amp;a[j])==0))</span><br><span class="line">			f[i][j]=1;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	for(int i=1;i&lt;=cnt;i++)dp[1][t[i]][a[i]]=1;</span><br><span class="line">	for(int i=2;i&lt;=n;i++)</span><br><span class="line">	for(int j=1;j&lt;=cnt;j++)</span><br><span class="line">	for(int q=1;q&lt;=cnt;q++)</span><br><span class="line">	&#123;</span><br><span class="line">		if(f[j][q])</span><br><span class="line">		for(int p=t[j];p+t[q]&lt;=k;p++)</span><br><span class="line">		&#123;</span><br><span class="line">			dp[i][p+t[q]][a[q]]+=dp[i-1][p][a[j]];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=1;i&lt;=cnt;i++) ans+=dp[n][k][a[i]];</span><br><span class="line">	printf(&quot;%d&quot;,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>扫雷<br>某一位的状态可以由上面的和上上面的推过来<br>所以枚举第一位有没有雷<br>dp方程:<br>b[i]=a[i-1]-b[i-2]-b[i-1];<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int n,a[19999],b[19999], ans;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">	for(int i=1;i&lt;=n;i++)</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">	for(int i=0;i&lt;=1;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		b[0]=0;</span><br><span class="line">		b[1]=i;</span><br><span class="line">		for(int j=2;j&lt;=n+1;j++)</span><br><span class="line">		&#123;</span><br><span class="line">		b[j]=a[j-1]-b[j-2]-b[j-1];</span><br><span class="line">		if(b[j]&gt;1||b[j]&lt;0)break;</span><br><span class="line">		if(j==n+1&amp;&amp;b[n+1]==0) ans++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	printf(&quot;%d&quot;,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>codevs<br>解药还是毒药<br>爆搜题<br>状态压缩<br>可以把要合并压缩为一个二进制数，1表示有病，0表示没病<br>分成两个数组<br>一个是治得a，一个是让他的病的b<br>a中0表示治，1表示不治<br>b中0表示不得，1表示得<br>用a中的对他&amp;就是治他了，因为只又全是一才不治有病的，不会影响到1<br>用b中的对他|就是让他患病，因为只要有一个是1，就患病，也不影响本来就患病的<br>举个例子<br>    10110101<br> &amp;00001001<br>  =00000001<br>  看能治1,3,4,6的都被治了，而有病的不治8的还是有病，本来没病的2,5,7也没患病<br>    10110101<br>  | 00001001<br>  =10111101<br>  5都得病了，1,3,4,6,8也没好<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int n,m,a[19999],b[19999],s[19999],f[19999];</span><br><span class="line">queue&lt;int&gt; q;</span><br><span class="line">int bfs()&#123;</span><br><span class="line">	f[(1&lt;&lt;n)-1]=1;</span><br><span class="line">	q.push((1&lt;&lt;n)-1);</span><br><span class="line">	while(!q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		int x=q.front();q.pop();</span><br><span class="line">		for(int i=1;i&lt;=m;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			int tmp=(x&amp;a[i])|b[i];</span><br><span class="line">			if(tmp==0)</span><br><span class="line">			&#123;</span><br><span class="line">				printf(&quot;%d&quot;,s[x]+1);</span><br><span class="line">				return 1;</span><br><span class="line">			&#125;</span><br><span class="line">			if(!f[tmp])</span><br><span class="line">			&#123;</span><br><span class="line">				f[tmp]=1;s[tmp]=s[x]+1;</span><br><span class="line">				q.push(tmp);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; </span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</span><br><span class="line">	for(int i=1;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int x;</span><br><span class="line">		for(int j=n-1;j&gt;=0;j--)</span><br><span class="line">		&#123;</span><br><span class="line">			scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">			if(x==0||x==-1)</span><br><span class="line">			a[i]+=(1&lt;&lt;j);</span><br><span class="line">			if(x==-1)</span><br><span class="line">			b[i]+=(1&lt;&lt;j);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	if(!bfs()) printf(&quot;The patient will be dead&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/08/08/搜索专题/" title="搜索专题">搜索专题</a></h2>
+                <p class="excerpt">
+                
+                会场预约找一个最小的r加进集合12345678910111213141516171819202122232425262728293031323334353637383940414243444546#include &amp;lt;cstdio&amp;gt;  #include &amp;lt;algorithm&amp;gt; 
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-08-08T09:54:59.000Z" class="post-list__meta--date date">2017-08-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/搜索/">搜索</a>, <a class="tag-link" href="/tags/暴力/">暴力</a>
+</span><a class="btn-border-small" href="/2017/08/08/搜索专题/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "96c7315d934b43bfaa12ffd064d52d5e",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2017 - 本站使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题,
+        由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+    </span>
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-78918255-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9cdad07c755fa23f6aced510c6760e87";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+</body>
+</html>

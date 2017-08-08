@@ -143,6 +143,20 @@
   
     
     <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/08/08/dp专题/" title="link to post.title">dp专题</a></h2>
+      <p class="excerpt">
+    
+      互不侵犯的king状压dp题每一行放不放国王可以用1010010来表示所以每一行的状态可以看成一个二进制数这样n是小于9的，可以把小于2^n，（因为2^9是512，很小）的数打表存出来把自己和自己冲突的筛掉，然后记下有多少1，判断他们是否冲突。预处理完了，接下来是dp了动态转移方程：dp[i][q+t[j]][a[j]]=Σdp[i-1][q][a[i]]123456789101112131415
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-08-08T09:55:11.000Z" class="post-list__meta--date date">2017-08-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/dp/">dp</a>
+</span><a class="btn-border-small" href="/2017/08/08/dp专题/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
       <h2 class="post-list__post-title post-title"><a href="/2017/06/11/子串/" title="link to post.title">子串</a></h2>
       <p class="excerpt">
     
@@ -265,20 +279,6 @@
       <div class="post-list__meta"><time datetime="2017-06-07T07:14:39.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
   <a class="tag-link" href="/tags/dp/">dp</a>
 </span><a class="btn-border-small" href="/2017/06/07/导弹拦截/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/导弹拦截(数据加强版 n=300000)/" title="link to post.title">导弹拦截</a></h2>
-      <p class="excerpt">
-    
-      普通的求一个最长上升子序列，一个最大下降子序列，输出就OK了，是n^2的复杂度而这样就过不了300000的点了所以我们就用二分查找的办法来优化，因为输入的复杂度无法优化，所以复杂度是nlogn最长上升子序列上升思路：有一个low数组，low[i]是长度为i的最长子序列的最小值维护一个上升序列，如果加入的数&amp;gt;low[len],最长子序列就可以更新了，如果小于等于，则把正好大于他的一个数改为他。
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T07:13:21.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/dp/">dp</a>
-</span><a class="btn-border-small" href="/2017/06/07/导弹拦截(数据加强版 n=300000)/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   

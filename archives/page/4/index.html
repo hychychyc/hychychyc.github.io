@@ -143,6 +143,91 @@
   
     
     <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/06/08/书的复制/" title="link to post.title">书的复制</a></h2>
+      <p class="excerpt">
+    
+      这个题就是一个动归，和乘积最大一样，处理前缀和，枚举当前位置和划分层数，找最大的时间，取最小值12345678910111213141516171819202122232425262728293031323334353637383940#include&amp;lt;cstdio&amp;gt;#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstring&amp;gt;using namespa
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-06-08T07:59:02.000Z" class="post-list__meta--date date">2017-06-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/dp/">dp</a>
+</span><a class="btn-border-small" href="/2017/06/08/书的复制/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/06/08/最长公共子序列/" title="link to post.title">最长公共子序列</a></h2>
+      <p class="excerpt">
+    
+      最长公共子序列（lcs）到最长上升子序列（lis）的转化。把第一个串的元素，转化为第二个串的位置，再倒过来，找最长上升子序列。别问我为什么，我也不知道。。。。。
+简单说明：上面的序列和最长公共子串是等价的。对于一个满足最长严格递增子序列的序列，该序列必对应一个匹配的子串。反序是为了在递增子串中，每个字母对应的序列最多只有一个被选出。反证法可知不存在更大的公共子串，因为如果存在，则求得的最长递增子序
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-06-08T07:46:07.000Z" class="post-list__meta--date date">2017-06-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/dp/">dp</a>
+</span><a class="btn-border-small" href="/2017/06/08/最长公共子序列/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/低价购买/" title="link to post.title">低价购买</a></h2>
+      <p class="excerpt">
+    
+      第一问很好做，就是一个很简单的dp求最长下降子序列。第二问就有一些问题了，怎么找最大的方案数呢？那就需要看状态了，i位置的方案数只能由比他小一的位置转移过来，而且每一个都能转移过来，所以说因为第一问求出f[i]了所以递推方程式为 t[i]=∑t[j]  (f[j]+1=f[i])但还有一个问题，不能重复，如果有相同的情况，就可以把后面的方案数去掉，因为不可能是最优解，这样就不重复了。1234567
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-06-07T09:19:06.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/dp/">dp</a>
+</span><a class="btn-border-small" href="/2017/06/07/低价购买/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/二维费用的背包/" title="link to post.title">二维费用的背包</a></h2>
+      <p class="excerpt">
+    
+      12345678910111213141516171819202122232425262728293031323334#include&amp;lt;cstdio&amp;gt;#include&amp;lt;cmath&amp;gt;#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstring&amp;gt;using namespace std;int f[999][999];int m,n,k;int w
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-06-07T07:37:28.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/dp/">dp</a>
+</span><a class="btn-border-small" href="/2017/06/07/二维费用的背包/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/清北学堂入学测试d/" title="link to post.title">清北学堂入学测试d</a></h2>
+      <p class="excerpt">
+    
+      清北学堂入学测试d需要加回去啊啊啊啊啊啊！123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;int n;int a[2000000];int 
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-06-07T07:37:15.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/2016/">2016</a>
+</span><a class="btn-border-small" href="/2017/06/07/清北学堂入学测试d/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/2016 noip 蚯蚓（earthworm）模板/" title="link to post.title">石子合并</a></h2>
+      <p class="excerpt">
+    
+      地址在这这道题一开始我没有附初值，否则有负的情况。longlong超时。。数组开小 。。最后虽然过了，但时间总是卡到1s，非常令人不解。以后做题要仔细，不要忘记一些最基本的错误。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657#inclu
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-06-07T07:36:57.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/2016noip/">2016noip</a>
+</span><a class="btn-border-small" href="/2017/06/07/2016 noip 蚯蚓（earthworm）模板/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
       <h2 class="post-list__post-title post-title"><a href="/2017/06/07/石子合并/" title="link to post.title">石子合并</a></h2>
       <p class="excerpt">
     
@@ -194,91 +279,6 @@
       <div class="post-list__meta"><time datetime="2017-06-07T07:32:40.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
   <a class="tag-link" href="/tags/最短路模板/">最短路模板</a>
 </span><a class="btn-border-small" href="/2017/06/07/SPFA模板/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/洛谷P3372线段树/" title="link to post.title">洛谷P3372线段树</a></h2>
-      <p class="excerpt">
-    
-      这里写链接内容1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283#include&amp;lt;cstdio&amp;gt;using namespac
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T07:32:27.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/线段树模板/">线段树模板</a>
-</span><a class="btn-border-small" href="/2017/06/07/洛谷P3372线段树/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/清北学堂总结/" title="link to post.title">清北学堂总结</a></h2>
-      <p class="excerpt">
-    
-      day1上午1搜索：先写出基本的搜索模板，然后将大小变量放入dfs返回值去，根据dfs中变量的数量开相应维数的数组，写出记忆化搜索，再根据边界条件和记忆化搜索写出dp。2差值维护： 
-1234567891011121314151617181920212223242526272829#include&amp;lt;cstdio&amp;gt;using namespace std;int n;int m;int a
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T07:32:02.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/2016总结/">2016总结</a>
-</span><a class="btn-border-small" href="/2017/06/07/清北学堂总结/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/靶形数独/" title="link to post.title">靶形数独</a></h2>
-      <p class="excerpt">
-    
-      12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T07:31:48.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/dfs搜索/">dfs搜索</a>
-</span><a class="btn-border-small" href="/2017/06/07/靶形数独/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/抓住那头牛/" title="link to post.title">抓住那头牛</a></h2>
-      <p class="excerpt">
-    
-      广度优先搜索，深搜超时需要判断界限，做标记，已到过的地点就不必去了12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include&amp;lt;cstdio&amp;gt;#include&amp;lt;iostream&amp;gt;using namespac
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T07:31:08.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/搜索/">搜索</a>
-</span><a class="btn-border-small" href="/2017/06/07/抓住那头牛/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/N皇后/" title="link to post.title">N皇后</a></h2>
-      <p class="excerpt">
-    
-      二进制log2（t）+1 便是位数1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980#include&amp;lt;iostream&amp;gt;#include
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T07:30:49.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/位运算优化/">位运算优化</a>
-</span><a class="btn-border-small" href="/2017/06/07/N皇后/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/07/金明的预算方案/" title="link to post.title">金明的预算方案</a></h2>
-      <p class="excerpt">
-    
-      组合背包12345678910111213141516171819202122232425262728293031323334#include&amp;lt;iostream&amp;gt;using namespace std;int v[9999];int w[9999];int k[9999];int f[99999];int n,m;int t=0;int s[9999][10];int main()&amp;#
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-07T07:30:34.000Z" class="post-list__meta--date date">2017-06-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/组合背包dp/">组合背包dp</a>
-</span><a class="btn-border-small" href="/2017/06/07/金明的预算方案/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   
